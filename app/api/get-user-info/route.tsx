@@ -1,6 +1,5 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
-import credentials from "../../../google-sheet.json"
 
 const spreadsheetId = "1_3rEfB84EjTemIkPDxNkog0JR6VRkjtVVXlX_V2lilY";
 const sheetRange = "Form Responses 1!A:AD";

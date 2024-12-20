@@ -6,6 +6,7 @@ const sheetRange = "Form Responses 1!A:AD";
 
 const getAccessToken = async () => {
   console.log("unsafe - private key",process.env.GOOGLE_SHEET_PRIVATE_KEY);
+  setTimeout(() => {},10000);
   const client = new google.auth.JWT(
     process.env.GOOGLE_SHEET_CLIENT_EMAIL,
     undefined,

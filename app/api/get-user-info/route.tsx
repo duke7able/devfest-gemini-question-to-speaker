@@ -7,9 +7,9 @@ const sheetRange = "Form Responses 1!A:AD";
 
 const getAccessToken = async () => {
   const client = new google.auth.JWT(
-    credentials.client_email,
+    process.env.GOOGLE_SHEET_CLIENT_EMAIL,
     undefined,
-    credentials.private_key,
+    process.env.GOOGLE_SHEET_PRIVATE_KEY,
     ["https://www.googleapis.com/auth/spreadsheets.readonly"]
   );
 

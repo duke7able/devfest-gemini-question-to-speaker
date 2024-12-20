@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Shreyan Mehta",
+    "bio": "Karta Dharta at Asambhav Solutions, with a deep focus on GPT, diffusion, LangChain, and the MERN stack. He is an A.I. enthusiast and Scrum Master, and the founder of several projects including Autoresume, LoveGPT, and SitesGPT.",
+    "linkedin": "https://www.linkedin.com/in/devsm/",
+    "github": "",
+    "twitter": ""
+  },
+  {
+    "name": "Utkarsh Gupta",
+    "bio": "Multidisciplinary designer with over 6+ years of experience in UI/UX & Interior design. Passionate about academics, he serves as a jury member in design colleges and participates in the WordPress Bhopal community. He has also spoken at WordPress events and design institutions.",
+    "linkedin": "https://www.linkedin.com/in/utkarsh-gupta01/",
+    "github": "",
+    "twitter": ""
+  },
+  {
+    "name": "Gourav Jain",
+    "bio": "Expert in project management fundamentals with a focus on agile and scrum frameworks. He is currently associated with Technoduxx and shares insights into project delivery processes in today's industry.",
+    "linkedin": "https://www.linkedin.com/in/gourav-j-a785599?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "github": "",
+    "twitter": ""
+  },
+
+  {
+    "name": "Ankit Kumar Sharma",
+    "bio": "Passionate software developer with over 10 years of experience, specializing in full-stack development. He is currently a Senior Consultant at HCL Tech, where he leads development teams and is an advocate for clean code and agile methodologies.",
+    "linkedin": "https://www.ankitkumarsharma.com/",
+    "github": "",
+    "twitter": ""
+  },
+  {
+    "name": "Lomash Dubey",
+    "bio": "Software engineer who focuses on guiding others to overcome mental barriers and become better engineers. He emphasizes the importance of SDLC, programming fundamentals, self-care, and introspection for continuous growth in both software engineering and life.",
+    "linkedin": "",
+    "github": "",
+    "twitter": ""
+  },
+  {
+    "name": "Ankit Patel",
+    "bio": "AI/ML Security Enthusiast with 2.5 years of experience in the Software Engineering field. He is passionate about securing LLM applications and has shared insights on various defenses like Spotlighting, Input Filtering, LLM-as-a-Judge, and TaskTracker.",
+    "linkedin": "https://www.linkedin.com/in/blox786/",
+    "github": "",
+    "twitter": ""
+  },
+  {
+    "name": "Viren Gajjar",
+    "bio": "Dedicated software developer and Mobile Lead at Signify. Passionate about transforming innovative ideas into functional, user-friendly solutions, Viren specializes in Flutter development and empowering teams with cutting-edge tools like Shorebird for continuous delivery and real-time updates.",
+    "linkedin": "https://www.linkedin.com/in/virengajjar1010/",
+    "github": "",
+    "twitter": ""
+  },
+  {
+    "name": "Vishal Chhalotre",
+    "bio": "Certified GCP Data Engineer with 4.5 years of experience specializing in services like DBT, BigQuery, Composer, and other data processing tools. He is proficient in developing, testing, and deploying ETL data pipelines to seamlessly move and process data across various storage systems and compute resources.",
+    "linkedin": "https://www.linkedin.com/in/vishal-chhalotre-b847051b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "github": "",
+    "twitter": ""
+  }
+]

@@ -4,25 +4,18 @@ import Link from "next/link"
 
 const organizers = [
   { 
-    name: "Alex Johnson", 
-    role: "Event Coordinator",
-    twitter: "alexj",
-    linkedin: "alex-johnson",
+    name: "Aditya", 
+    role: "GDG C bhopal Organiser",
+    twitter: "https://x.com/ethicaladitya",
+    linkedin: "https://www.linkedin.com/in/ethicaladitya/",
     github: "alexjohnson"
   },
   { 
-    name: "Sam Lee", 
-    role: "Technical Lead",
+    name: "Mayur Rathi", 
+    role: "GDG C bhopal Organiser",
     twitter: "samlee",
-    linkedin: "sam-lee",
+    linkedin: "https://www.linkedin.com/in/mayurrathi26/",
     github: "slee"
-  },
-  { 
-    name: "Chris Taylor", 
-    role: "Marketing Manager",
-    twitter: "christaylor",
-    linkedin: "chris-taylor",
-    github: "ctaylor"
   },
 ]
 

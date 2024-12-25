@@ -33,13 +33,13 @@ export default function OrganizerCards() {
               <CardContent>
                 <p className="text-muted-foreground mb-4">{organizer.role}</p>
                 <div className="flex space-x-4">
-                  <Link href={`https://twitter.com/${organizer.twitter}`} className="text-muted-foreground hover:text-primary">
+                  <Link href={`${organizer.twitter}`} className="text-muted-foreground hover:text-primary">
                     <Twitter className="w-5 h-5" />
                   </Link>
-                  <Link href={`https://linkedin.com/in/${organizer.linkedin}`} className="text-muted-foreground hover:text-primary">
+                  <Link href={`${organizer.linkedin}`} className="text-muted-foreground hover:text-primary">
                     <Linkedin className="w-5 h-5" />
                   </Link>
-                  <Link href={`https://github.com/${organizer.github}`} className="text-muted-foreground hover:text-primary">
+                  <Link href={`${organizer.github}`} className="text-muted-foreground hover:text-primary">
                     <Github className="w-5 h-5" />
                   </Link>
                 </div>

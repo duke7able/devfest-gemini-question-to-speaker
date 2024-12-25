@@ -1,15 +1,20 @@
-'use client'
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from "react-share"
-import { Facebook, Twitter, Linkedin } from 'lucide-react'
-import Skeleton from "react-loading-skeleton"
-import "react-loading-skeleton/dist/skeleton.css"
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Facebook, Twitter, Linkedin } from "lucide-react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-export default function Hero({ 
-  // setThemeColor, 
-  userInfo, loading }: { loading: boolean, userInfo: any, setThemeColor: (color: string) => void }) {
+export default function Hero({
+  // setThemeColor,
+  userInfo,
+  loading,
+}: {
+  loading: boolean;
+  userInfo: any;
+  setThemeColor: (color: string) => void;
+}) {
   // const profileUrl = `https://example.com/profile` // Replace with the actual profile URL if necessary
 
   return (
@@ -21,19 +26,33 @@ export default function Hero({
               <Skeleton circle height={192} width={192} />
             ) : (
               <>
-                <AvatarImage src="/placeholder.svg?height=192&width=192" alt="Profile Picture" />
+                <AvatarImage
+                  src="/placeholder.svg?height=192&width=192"
+                  alt="Profile Picture"
+                />
                 <AvatarFallback>
-                  {userInfo?.name ? userInfo.name.split(' ').map((n:any) => n[0]).join('') : 'NA'}
+                  {userInfo?.name
+                    ? userInfo.name
+                        .split(" ")
+                        .map((n: any) => n[0])
+                        .join("")
+                    : "NA"}
                 </AvatarFallback>
               </>
             )}
           </Avatar>
           <div className="text-center sm:text-left flex-grow">
             <h1 className="text-3xl sm:text-4xl font-bold mb-2">
-              {loading ? <Skeleton width={200} /> : userInfo?.name || ''}
+              {loading ? <Skeleton width={200} /> : userInfo?.name || ""}
             </h1>
             <p className="text-xl text-muted-foreground mb-4">
-              {loading ? <Skeleton width={250} /> : userInfo?.["what field you are currently in or you want to go in"] || ''}
+              {loading ? (
+                <Skeleton width={250} />
+              ) : (
+                userInfo?.[
+                  "what field you are currently in or you want to go in"
+                ] || ""
+              )}
             </p>
             <div className="flex justify-center sm:justify-start space-x-4 mb-4">
               {loading ? (
@@ -45,19 +64,34 @@ export default function Hero({
               ) : (
                 <>
                   {userInfo?.["linkedin profile link"] && (
-                    <LinkedinShareButton url={userInfo["linkedin profile link"]}>
+                    <a
+                      href={userInfo["linkedin profile link"]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn Profile"
+                    >
                       <Linkedin className="w-6 h-6" />
-                    </LinkedinShareButton>
+                    </a>
                   )}
                   {userInfo?.["twitter profile link"] && (
-                    <TwitterShareButton url={userInfo["twitter profile link"]}>
+                    <a
+                      href={userInfo["twitter profile link"]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Twitter Profile"
+                    >
                       <Twitter className="w-6 h-6" />
-                    </TwitterShareButton>
+                    </a>
                   )}
                   {userInfo?.["insta profile link"] && (
-                    <FacebookShareButton url={userInfo["insta profile link"]}>
+                    <a
+                      href={userInfo["insta profile link"]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram Profile"
+                    >
                       <Facebook className="w-6 h-6" />
-                    </FacebookShareButton>
+                    </a>
                   )}
                 </>
               )}
@@ -66,5 +100,5 @@ export default function Hero({
         </CardContent>
       </Card>
     </section>
-  )
+  );
 }

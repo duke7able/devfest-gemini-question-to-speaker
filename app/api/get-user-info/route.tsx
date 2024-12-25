@@ -1,11 +1,10 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
-const spreadsheetId = "1_3rEfB84EjTemIkPDxNkog0JR6VRkjtVVXlX_V2lilY";
+const spreadsheetId = process.env.SPREADSHEET_ID;
 const sheetRange = "Form Responses 1!A:AD";
 
 const getAccessToken = async () => {
-  console.log("unsafe - private key",process.env.GOOGLE_SHEET_PRIVATE_KEY);
   setTimeout(() => {},10000);
   const client = new google.auth.JWT(
     process.env.GOOGLE_SHEET_CLIENT_EMAIL,

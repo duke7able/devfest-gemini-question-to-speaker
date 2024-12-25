@@ -1,137 +1,139 @@
-# DevFest
+# DevFest - Generative AI Question Generation System
 
-DevFest is a modern web application built using the Next.js framework. This application leverages React for the frontend and includes various tools and libraries for an enhanced development and user experience.
+## Overview
+DevFest is a Generative AI-powered project designed to assist event participants by generating relevant questions based on data submitted through a Google Form. The generated questions are tailored to the filled data and are intended to facilitate insightful conversations with mentors present at the event.
+
+This project leverages Google Sheets to store submitted form data, processes it to understand the participant’s context, and uses Generative AI to generate potential questions that mentors might be asked.
+
+---
 
 ## Features
+- **Google Form Integration**: Collect data from participants and store it in Google Sheets seamlessly.
+- **Data Processing**: Extract and analyze data from Google Sheets.
+- **AI-Powered Question Generation**: Use the Google Generative AI API to generate tailored questions for participants.
+- **Responsive and Interactive UI**: Built with modern tools like React and TailwindCSS for a sleek user experience.
 
-- **Next.js**: A React framework for server-side rendering and static site generation.
-- **Tailwind CSS**: A utility-first CSS framework for styling.
-- **Google Generative AI**: Integrates generative AI capabilities via Google APIs.
-- **Radix UI**: A set of accessible UI components.
-- **Skeleton Loading**: Provides loading placeholders using `react-loading-skeleton`.
-- **Social Sharing**: Easy integration of social sharing features with `react-share`.
+---
 
 ## Prerequisites
+To run the project, ensure you have the following:
 
-Ensure you have the following installed on your system:
+1. **Node.js**: Version 16 or higher.
+2. **Google Cloud Account**: To enable the Generative AI API and Google Sheets API.
+3. **Google Form and Sheet**: Create and link a Google Form to a Google Sheet.
+4. **Environment Variables**: Setup necessary keys for accessing Google APIs.
 
-- **Node.js**: Version 14 or higher
-- **npm**: Version 11 or higher
+---
 
 ## Installation
 
 1. Clone the repository:
-
    ```bash
-   git clone gitlab.com/purimuneer/devfest-project.git
+   git clone https://github.com/duke7able/devfest-gemini-question-to-speaker
    cd devfest
    ```
 
 2. Install dependencies:
-
    ```bash
    npm install
    ```
 
-## Scripts
-
-- **Start Development Server:**
-
-  ```bash
-  npm run dev
-  ```
-
-  Starts the application in development mode.
-
-- **Build for Production:**
-
-  ```bash
-  npm run build
-  ```
-
-  Builds the application for production.
-
-- **Start Production Server:**
-
-  ```bash
-  npm run start
-  ```
-
-  Runs the application in production mode.
-
-- **Linting:**
-
-  ```bash
-  npm run lint
-  ```
-
-  Lints the codebase using ESLint.
-
-## Folder Structure
-
-The project structure follows the standard Next.js convention:
-
-- **/pages**: Contains the application’s routes.
-- **/public**: Static assets such as images and icons.
-- **/styles**: Global styles and Tailwind CSS configurations.
-- **/components**: Reusable React components.
-- **/utils**: Helper functions and utilities.
-
-## Libraries and Tools
-
-### Dependencies
-
-- **@google/generative-ai**: Google’s generative AI SDK
-- **@radix-ui/react-avatar**, **@radix-ui/react-label**, **@radix-ui/react-slot**: Radix UI components for accessible design.
-- **class-variance-authority**, **clsx**: Utilities for conditional class names.
-- **googleapis**: Google API client library.
-- **lucide-react**: Icon library for React.
-- **react-loading-skeleton**: Skeleton loading UI.
-- **react-share**: Social media sharing library.
-- **tailwind-merge**: Merge and optimize Tailwind CSS classes.
-- **tailwindcss-animate**: Animation utilities for Tailwind CSS.
-
-### Dev Dependencies
-
-- **@types/node**, **@types/react**, **@types/react-dom**: TypeScript type definitions.
-- **eslint**, **eslint-config-next**: ESLint configuration for Next.js.
-- **postcss**, **tailwindcss**: CSS processing tools.
-- **typescript**: TypeScript support.
-
-## Styling
-
-The project uses Tailwind CSS for styling with support for animations and class merging.
-
-## Contribution
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch:
-
-   ```bash
-   git checkout -b feature-branch
+3. Configure environment variables:
+   Create a `.env` file in the root directory and add the following:
+   ```env
+   GOOGLE_SHEET_PRIVATE_KEY=your-google-sheet-private-key
+   GOOGLE_SHEET_CLIENT_EMAIL=your-google-sheet-id
+   GEMINI_API_KEY=your-generative-ai-api-key
+   SPREADSHEET_ID=your-spreadsheet-id
    ```
 
-3. Commit your changes:
-
+4. Run the development server:
    ```bash
-   git commit -m "Add a new feature"
+   npm run dev
    ```
 
-4. Push to the branch:
-
-   ```bash
-   git push origin feature-branch
-   ```
-
-5. Open a pull request.
-
-## License
-
-This project is licensed under [MIT License](LICENSE).
+   The app will be available at [http://localhost:3000](http://localhost:3000).
 
 ---
 
-For any questions or suggestions, please contact [your-email@example.com].
+## Scripts
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the application for production.
+- `npm run start`: Start the production server.
+- `npm run lint`: Lint your code for errors.
 
+---
+
+## Technology Stack
+### Frontend
+- **React.js**: Component-based UI library.
+- **Next.js**: Framework for server-side rendering and routing.
+- **TailwindCSS**: Utility-first CSS framework for styling.
+
+### Backend
+- **Google Sheets API**: To fetch and process data from the Google Sheet.
+- **Google Generative AI**: To generate context-based questions.
+
+### Libraries and Tools
+- `@google/generative-ai`: Interface with the Google Generative AI API.
+- `googleapis`: Access Google Sheets API.
+- `react-loading-skeleton`: Display skeleton loading states.
+- `react-share`: Enable social sharing functionalities.
+- `tailwindcss-animate`: Add animations to the UI.
+
+---
+
+## Usage
+1. **Submit Form**: Participants fill out the Google Form.
+2. **Data Storage**: Form submissions are automatically stored in the linked Google Sheet.
+3. **Question Generation**: The app fetches data from the Google Sheet and uses AI to generate possible questions for the participant to ask mentors.
+4. **Mentor Interaction**: Participants can use the generated questions during their mentor interactions.
+
+---
+
+## Deployment
+1. Build the project for production:
+   ```bash
+   npm run build
+   ```
+
+2. Start the production server:
+   ```bash
+   npm run start
+   ```
+
+Alternatively, deploy to a hosting service like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
+
+---
+
+## Contributing
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a Pull Request.
+
+---
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgments
+- **Google**: For providing powerful APIs for integration.
+- **React**: For a robust frontend framework.
+- **Next.js**: For simplifying server-side rendering.
+- **TailwindCSS**: For streamlined UI design.
+
+---

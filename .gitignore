@@ -39,3 +39,5 @@ next-env.d.ts
 google-sheet.json
 package-lock.json
 .next
+
+/patches

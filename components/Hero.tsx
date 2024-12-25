@@ -2,9 +2,12 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Facebook, Twitter, Linkedin } from "lucide-react";
+import { Twitter, Linkedin , Share,Instagram} from "lucide-react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { useState } from "react";
+import ShareProfile from "./ShareProfile";
+import { ClickAwayListener, Popper } from "@mui/material";
 
 export default function Hero({
   // setThemeColor,
@@ -15,7 +18,10 @@ export default function Hero({
   userInfo: any;
   setThemeColor: (color: string) => void;
 }) {
+  const [shareAnchorEl, setShareAnchorEl] = useState<SVGSVGElement | null>(null);
+  const [openShareMenu, setOpenShareMenu] = useState(false);
   // const profileUrl = `https://example.com/profile` // Replace with the actual profile URL if necessary
+  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <section className="py-20 px-4">
@@ -90,9 +96,28 @@ export default function Hero({
                       rel="noopener noreferrer"
                       aria-label="Instagram Profile"
                     >
-                      <Facebook className="w-6 h-6" />
+                      <Instagram className="w-6 h-6" />
                     </a>
                   )}
+
+            <Share style={{cursor:"pointer"}} onClick={(event) => {
+              setShareAnchorEl(event.currentTarget);
+              setOpenShareMenu(true);
+            }}/>
+                  <Popper
+                    open={openShareMenu}
+                    anchorEl={shareAnchorEl}
+                    placement="bottom-start"
+                    style={{ zIndex: 1300 }}
+                  >
+                    <ClickAwayListener
+                      onClickAway={() => setOpenShareMenu(false)}
+                    >
+                      <div>
+                        <ShareProfile profileUrl={`${currentUrl}`} />
+                      </div>
+                    </ClickAwayListener>
+                  </Popper>
                 </>
               )}
             </div>

@@ -1,3 +1,4 @@
+
 # DevFest - Generative AI Question Generation System
 
 ## Overview
@@ -92,17 +93,34 @@ To run the project, ensure you have the following:
 ---
 
 ## Deployment
-1. Build the project for production:
+
+### Deploying to Vercel
+
+1. Install the [Vercel CLI](https://vercel.com/cli):
    ```bash
-   npm run build
+   npm i -g vercel
    ```
 
-2. Start the production server:
+2. Log in to your Vercel account:
    ```bash
-   npm run start
+   vercel login
    ```
 
-Alternatively, deploy to a hosting service like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
+3. Initialize the deployment:
+   ```bash
+   vercel
+   ```
+
+   - Follow the prompts to select the appropriate configuration for your project.
+   - Ensure you set your `.env` variables in the Vercel dashboard under **Project Settings > Environment Variables**.
+
+4. Build and deploy:
+   - After initializing, the project will automatically deploy. You can use the following command for subsequent updates:
+     ```bash
+     vercel --prod
+     ```
+
+5. Your app will be live at a generated Vercel URL or your custom domain if configured.
 
 ---
 

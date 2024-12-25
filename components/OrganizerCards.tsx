@@ -8,14 +8,14 @@ const organizers = [
     role: "GDG C bhopal Organiser",
     twitter: "https://x.com/ethicaladitya",
     linkedin: "https://www.linkedin.com/in/ethicaladitya/",
-    github: "alexjohnson"
+    github: ""
   },
   { 
     name: "Mayur Rathi", 
     role: "GDG C bhopal Organiser",
-    twitter: "samlee",
+    twitter: "",
     linkedin: "https://www.linkedin.com/in/mayurrathi26/",
-    github: "slee"
+    github: ""
   },
 ]
 
@@ -33,15 +33,15 @@ export default function OrganizerCards() {
               <CardContent>
                 <p className="text-muted-foreground mb-4">{organizer.role}</p>
                 <div className="flex space-x-4">
-                  <Link href={`${organizer.twitter}`} className="text-muted-foreground hover:text-primary">
+                  {organizer?.twitter?<Link href={`${organizer.twitter}`} className="text-muted-foreground hover:text-primary">
                     <Twitter className="w-5 h-5" />
-                  </Link>
-                  <Link href={`${organizer.linkedin}`} className="text-muted-foreground hover:text-primary">
+                  </Link>:null}
+                  {organizer?.linkedin?<Link href={`${organizer.linkedin}`} className="text-muted-foreground hover:text-primary">
                     <Linkedin className="w-5 h-5" />
-                  </Link>
-                  <Link href={`${organizer.github}`} className="text-muted-foreground hover:text-primary">
+                  </Link>:null}
+                  {organizer?.github?<Link href={`${organizer.github}`} className="text-muted-foreground hover:text-primary">
                     <Github className="w-5 h-5" />
-                  </Link>
+                  </Link>:null}
                 </div>
               </CardContent>
             </Card>

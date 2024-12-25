@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="py-6" style={{ backgroundColor: `${themeColor}22` }}>
       <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
         <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
-          Made with ❤️ by
+          Made with ❤️ by{" "}
           <Link href="https://www.linkedin.com/in/devsm/" className="text-primary hover:underline">
             Shreyan Mehta
           </Link>
